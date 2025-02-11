@@ -1,20 +1,26 @@
-// Placeholder for future functionality like form validation, user interaction, etc.
-console.log("Anime Streaming Site Loaded");
+// Simple Slider Script for Trending Anime Section
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slider-item');
+const totalSlides = slides.length;
 
-// Example of a search functionality
-document.querySelector('.cta-btn').addEventListener('click', function() {
-    alert("დაიწყეთ თქვენი საყვარელი ანიმე!");
-});
-
-// Example of a login redirect
-document.querySelector('.login-btn').addEventListener('click', function() {
-    window.location.href = 'login.html'; // Redirect to login page
-});
-
-// Example of an anime item click event
-const animeItems = document.querySelectorAll('.anime-item');
-animeItems.forEach(item => {
-    item.addEventListener('click', function() {
-        alert("გთხოვთ აირჩიოთ ანიმე");
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
     });
-});
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+}
+
+// Automatically change slides every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Initialize the slider
+showSlide(currentIndex);
