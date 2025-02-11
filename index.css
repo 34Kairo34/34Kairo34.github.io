@@ -7,12 +7,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
     color: #333;
     line-height: 1.6;
+    font-size: 18px;
+    overflow-x: hidden;
 }
 
-/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
@@ -26,23 +27,39 @@ html {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #2b2b2b, #444);
+    background: linear-gradient(135deg, #6a5acd, #483d8b);
     color: white;
-    padding: 30px 0;
+    padding: 50px 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
 header h1 {
-    font-size: 3.5em;
-    letter-spacing: 2px;
+    font-size: 4em;
     font-weight: bold;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 header h1:hover {
-    color: #6a5acd;
+    color: #ff6347;
+    transform: translateY(-5px);
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120%;
+    height: 100%;
+    background: url('images/hero-pattern.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    transform: translateX(-50%);
 }
 
 /* Navigation */
@@ -51,6 +68,8 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 15px 0;
+    position: relative;
+    z-index: 10;
 }
 
 nav ul li {
@@ -60,13 +79,14 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     transition: color 0.3s ease;
+    letter-spacing: 1px;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #6a5acd;
+    color: #ff6347;
 }
 
 /* Hero Section */
@@ -75,16 +95,18 @@ nav ul li a:hover, nav ul li a.active {
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 120px 0;
+    padding: 130px 0;
     position: relative;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-content h2 {
-    font-size: 4em;
+    font-size: 4.5em;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    font-weight: bold;
+    letter-spacing: 5px;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -95,13 +117,13 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .hero .btn {
-    font-size: 1.3em;
-    padding: 12px 30px;
-    background-color: #6a5acd;
+    font-size: 1.4em;
+    padding: 15px 35px;
+    background-color: #ff6347;
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.4s ease, transform 0.3s ease;
     font-weight: bold;
 }
 
@@ -120,15 +142,22 @@ nav ul li a:hover, nav ul li a.active {
     padding: 60px 0;
     background-color: #f9f9f9;
     text-align: center;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.15);
 }
 
 .featured-animes h2 {
-    font-size: 2.8em;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    font-size: 3em;
+    margin-bottom: 40px;
     font-weight: bold;
-    color: #444;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+}
+
+.featured-animes h2:hover {
+    color: #6a5acd;
 }
 
 .anime-container {
@@ -140,23 +169,21 @@ nav ul li a:hover, nav ul li a.active {
 
 .anime-card {
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    background-color: #fff;
-    padding: 15px;
 }
 
 .anime-card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    border-bottom: 3px solid #ddd;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    border-bottom: 4px solid #ddd;
+    transition: transform 0.4s ease;
 }
 
 .anime-card img:hover {
@@ -164,9 +191,9 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .anime-card h3 {
-    font-size: 1.4em;
-    margin: 10px 0;
-    color: #333;
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #444;
 }
 
 .anime-card p {
@@ -177,14 +204,14 @@ nav ul li a:hover, nav ul li a.active {
 
 .anime-card a {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #6a5acd;
+    padding: 14px 30px;
+    background-color: #ff6347;
     color: white;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
 }
 
 .anime-card a:hover {
@@ -193,18 +220,14 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .anime-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.anime-card:active {
-    transform: translateY(0);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h2 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
 
     .hero-content p {
@@ -212,7 +235,7 @@ nav ul li a:hover, nav ul li a.active {
     }
 
     nav ul li {
-        margin: 0 15px;
+        margin: 0 20px;
     }
 
     .featured-animes h2 {
@@ -220,7 +243,7 @@ nav ul li a:hover, nav ul li a.active {
     }
 
     .anime-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 }
 
@@ -230,6 +253,10 @@ nav ul li a:hover, nav ul li a.active {
     }
 
     .hero-content p {
-        font-size: 1.1em;
+        font-size: 1.2em;
+    }
+
+    .anime-card {
+        margin: 0 10px;
     }
 }
