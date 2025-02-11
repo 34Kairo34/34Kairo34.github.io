@@ -18,14 +18,28 @@ document.getElementById('search-button').addEventListener('click', function() {
 // Mouse move event to track position for background blur effect
 const searchSection = document.querySelector('.search-section');
 
+// Create a div for the mouse blur effect
+const mouseBlur = document.createElement('div');
+mouseBlur.classList.add('mouse-blur');
+searchSection.appendChild(mouseBlur);
+
+// Mousemove event to follow the mouse and apply effect
 searchSection.addEventListener('mousemove', (e) => {
     // Get mouse position relative to the section
-    const x = e.clientX / window.innerWidth * 100; // Position X as a percentage of window width
-    const y = e.clientY / window.innerHeight * 100; // Position Y as a percentage of window height
+    const x = e.clientX - searchSection.offsetLeft;
+    const y = e.clientY - searchSection.offsetTop;
 
-    // Apply these values to control the blur intensity and shift
-    searchSection.style.setProperty('--mouse-x', x + '%');
-    searchSection.style.setProperty('--mouse-y', y + '%');
+    // Position the blur circle at the mouse position
+    mouseBlur.style.left = `${x - 25}px`;  // Center the circle
+    mouseBlur.style.top = `${y - 25}px`;  // Center the circle
+
+    // Activate the blur effect when the mouse moves
+    searchSection.classList.add('active');
+});
+
+// Deactivate the blur effect when mouse leaves the area
+searchSection.addEventListener('mouseleave', () => {
+    searchSection.classList.remove('active');
 });
 
 // Function to perform the search
