@@ -59,6 +59,7 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 20px;
     transition: transform 0.3s ease;
     text-align: center;
+    cursor: pointer;
 }
 
 .anime-item img {
@@ -92,4 +93,58 @@ nav ul li a:hover, nav ul li a.active {
 /* Hover effect for anime item cards */
 .anime-item:hover {
     transform: translateY(-10px);
+}
+
+/* Pagination styles */
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1em;
+}
+
+.pagination a:hover {
+    background-color: #5b4ca1;
+}
+
+.pagination a.active {
+    background-color: #5b4ca1;
+}
+
+.pagination a.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .anime-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anime-item {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
 }
