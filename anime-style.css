@@ -1,22 +1,20 @@
-/* Reset styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-/* Header styles */
 header {
-    background-color: #2b2b2b;
-    color: #fff;
-    padding: 20px;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -28,7 +26,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    padding: 10px 0;
 }
 
 nav ul li {
@@ -39,96 +37,59 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
-/* Anime List styles */
+nav ul li a:hover, nav ul li a.active {
+    color: #6a5acd;
+}
+
 .anime-list {
-    padding: 30px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
 }
 
-.anime-list h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* Anime Item styling */
 .anime-item {
-    display: inline-block;
-    width: 22%; /* Reduced width to fit 4 items in one row */
-    margin: 1.5%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
     text-align: center;
 }
 
-/* Hover effect for anime items */
-.anime-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Image Styling */
 .anime-item img {
     width: 100%;
-    height: auto;
-    border-bottom: 3px solid #6a5acd; /* Decorative line */
-    transition: transform 0.3s ease-in-out;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-/* When hovering over the anime item image, apply animation */
-.anime-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Anime Item title */
 .anime-item h3 {
-    font-size: 1.4em;
-    margin-top: 15px;
-    color: #333;
+    font-size: 1.5em;
+    margin: 15px 0;
 }
 
-/* Anime Item button */
-.anime-item a {
+.watch-now-btn {
     display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #fff;
     background-color: #6a5acd;
+    color: white;
     padding: 10px 20px;
-    border-radius: 5px;
+    text-decoration: none;
     font-size: 1.1em;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the 'Watch Now' button */
-.anime-item a:hover {
-    background-color: #4b3a8e;
+.watch-now-btn:hover {
+    background-color: #5b4ca1;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 50px;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .anime-item {
-        width: 45%; /* Adjust for smaller screens */
-        margin: 10px 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .anime-item {
-        width: 90%; /* Adjust for very small screens */
-    }
+/* Hover effect for anime item cards */
+.anime-item:hover {
+    transform: translateY(-10px);
 }
