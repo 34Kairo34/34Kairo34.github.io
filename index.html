@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anime Hub</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div class="container">
             <h1>Anime Hub</h1>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="anime-list.html">Anime List</a></li>
                     <li><a href="search.html">Search</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -26,53 +25,27 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
-        <section class="welcome">
-            <h2>Welcome to Anime Hub</h2>
-            <p>Your go-to place for the latest and greatest anime series!</p>
-            <button class="cta">Explore Now</button>
-        </section>
-
-        <section class="featured">
-            <h2>Featured Anime</h2>
-            <div class="anime-grid">
-                <div class="anime-card">
-                    <img src="images/anime1.jpg" alt="Anime 1">
-                    <h3>Attack on Titan</h3>
-                    <a href="anime1.html">Watch Now</a>
-                </div>
-                <div class="anime-card">
-                    <img src="images/anime2.jpg" alt="Anime 2">
-                    <h3>Naruto Shippuden</h3>
-                    <a href="anime2.html">Watch Now</a>
-                </div>
-                <div class="anime-card">
-                    <img src="images/anime3.jpg" alt="Anime 3">
-                    <h3>One Piece</h3>
-                    <a href="anime3.html">Watch Now</a>
-                </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to the Anime Hub</h2>
+                <p>Your ultimate destination for anime lovers</p>
+                <a href="anime-list.html" class="btn">Explore Anime</a>
             </div>
         </section>
 
-        <section class="trending">
-            <h2>Trending Now</h2>
-            <div class="anime-slider">
-                <div class="slider-item">
-                    <img src="images/anime4.jpg" alt="Anime 4">
-                    <h3>Fullmetal Alchemist</h3>
-                </div>
-                <div class="slider-item">
-                    <img src="images/anime5.jpg" alt="Anime 5">
-                    <h3>My Hero Academia</h3>
-                </div>
+        <section class="featured-animes">
+            <h2>Featured Anime</h2>
+            <div class="anime-container" id="animeContainer">
+                <!-- Anime Cards Will be Loaded Here -->
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Anime Hub | All Rights Reserved</p>
+        <div class="container">
+            <p>&copy; 2025 Anime Hub | All Rights Reserved</p>
+        </div>
     </footer>
 </body>
 </html>
