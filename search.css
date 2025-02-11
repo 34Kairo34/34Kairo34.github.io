@@ -1,38 +1,66 @@
-<!DOCTYPE html>
-<html lang="ka">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Anime</title>
-    <link rel="stylesheet" href="search.css">
-</head>
-<body>
-    <header>
-        <h1>Anime Streaming</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="anime-list.html">Anime List</a></li>
-                <li><a href="search.html" class="active">Search</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login/SignUp</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Search page specific styles */
+.search-section {
+    padding: 50px 20px;
+    text-align: center;
+}
 
-    <section class="search-section">
-        <h2>ძებნა</h2>
-        <input type="text" id="search-bar" placeholder="ძიება ანიმეზე...">
-        <button id="search-button">ძებნა</button>
-        <div id="search-results">
-            <!-- Results will appear here -->
-        </div>
-    </section>
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
 
-    <footer>
-        <p>&copy; 2025 Anime Streaming. ყველა უფლება დაცულია.</p>
-    </footer>
+#search-button {
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    <script src="search.js"></script>
-</body>
-</html>
+#search-button:hover {
+    background-color: #5b4ca1;
+}
+
+#search-results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-result {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.search-result img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.search-result h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.search-result a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #6a5acd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.search-result a:hover {
+    background-color: #5b4ca1;
+}
