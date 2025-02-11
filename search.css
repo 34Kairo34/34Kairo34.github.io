@@ -193,11 +193,47 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Mobile layout */
     #search-bar {
         width: 80%;
     }
 
     .search-result {
         width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .search-section h2 {
+        font-size: 2em;
+    }
+
+    .pagination a {
+        padding: 10px 20px;
+    }
+}
+
+/* Tablet layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #search-bar {
+        width: 60%;
+    }
+
+    .search-result {
+        width: 45%;
+    }
+
+    .pagination a {
+        padding: 12px 25px;
     }
 }
