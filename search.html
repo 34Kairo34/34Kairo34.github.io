@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Anime | Anime Hub</title>
+    <title>Search Anime</title>
     <link rel="stylesheet" href="search.css">
-    <script defer src="search.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Anime Hub</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="anime-list.html">Anime List</a></li>
-                    <li><a href="search.html" class="active">Search</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Anime Streaming</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="search.html" class="active">Search</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login/SignUp</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="search-container">
-            <h2>Search for Your Favorite Anime</h2>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search Anime..." onkeyup="searchAnime()">
-                <button id="searchBtn" onclick="searchAnime()">Search</button>
-            </div>
-
-            <div id="animeResults" class="anime-results">
-                <!-- Search results will appear here -->
-            </div>
-        </section>
-    </main>
+    <section class="search-section">
+        <h2>ძებნა</h2>
+        <input type="text" id="search-bar" placeholder="ძიება ანიმეზე...">
+        <button id="search-button">ძებნა</button>
+        <div id="search-results">
+            <!-- Results will appear here -->
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Anime Hub | All Rights Reserved</p>
+        <p>&copy; 2025 Anime Streaming. ყველა უფლება დაცულია.</p>
     </footer>
+
+    <script src="search.js"></script>
 </body>
 </html>
