@@ -1,64 +1,60 @@
-/* General Reset */
+/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0f0f0f;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
     color: white;
+    line-height: 1.6;
 }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header */
-#header {
+/* Header Styles */
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #141414;
+    background-color: #111;
+    padding: 20px 40px;
 }
 
-#header .logo h1 {
-    font-size: 30px;
-    color: #f39c12;
+.main-header .logo h1 {
+    font-size: 28px;
+    color: #ff6f00;
+    font-weight: 700;
 }
 
-#main-nav ul {
+.main-header nav ul {
     list-style: none;
     display: flex;
 }
 
-#main-nav ul li {
-    margin-right: 30px;
+.main-header nav ul li {
+    margin: 0 20px;
 }
 
-#main-nav ul li a {
+.main-header nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
-#main-nav ul li a:hover {
-    color: #f39c12;
+.main-header nav ul li a:hover {
+    color: #ff6f00;
 }
 
-/* Hero Section */
-#hero {
+/* Hero Section Styles */
+.hero {
     background-image: url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,64 +63,69 @@ body {
     position: relative;
 }
 
-#hero::after {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }
 
-#hero .hero-content {
+.hero-content {
+    position: relative;
     z-index: 1;
 }
 
-#hero h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-#hero p {
+.hero p {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
 .cta-btn {
-    background-color: #f39c12;
+    background-color: #ff6f00;
     color: white;
     padding: 15px 25px;
+    font-size: 18px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-    background-color: #e67e22;
+    background-color: #ff3d00;
 }
 
-/* Latest Anime Section */
-#latest-anime {
-    margin-top: 50px;
+/* Featured Anime Section Styles */
+.featured-anime {
+    padding: 50px 0;
     text-align: center;
 }
 
-#latest-anime h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+.featured-anime h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.anime-list {
+.anime-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .anime-item {
-    background-color: #1c1c1c;
+    background-color: #333;
     border-radius: 10px;
     overflow: hidden;
     width: 250px;
@@ -141,52 +142,41 @@ body {
     object-fit: cover;
 }
 
-.anime-details {
-    padding: 15px;
-    text-align: center;
-}
-
-.anime-details h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.anime-details p {
-    font-size: 16px;
-    color: #bdc3c7;
-}
-
-/* Footer */
-#footer {
-    background-color: #141414;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+.anime-item h3 {
+    font-size: 20px;
     color: white;
+    padding: 15px;
+    background-color: #222;
 }
 
-#footer a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
 }
 
-/* Media Queries for Responsiveness */
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    #hero h2 {
-        font-size: 30px;
+    .anime-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #hero p {
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .hero p {
         font-size: 18px;
     }
 
     .cta-btn {
         font-size: 16px;
-    }
-
-    .anime-list {
-        flex-direction: column;
-        align-items: center;
     }
 }
