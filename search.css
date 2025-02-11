@@ -149,6 +149,7 @@ nav ul li a.active {
     text-align: center;
     background-color: #fff;
     border-bottom: 2px solid #ddd;
+    position: relative; /* Added for mouse effect */
 }
 
 .search-section h2 {
@@ -156,6 +157,23 @@ nav ul li a.active {
     color: #6a5acd;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mouse move effect */
+.search-section .mouse-blur {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;  /* Circle size */
+    height: 50px;  /* Circle size */
+    background-color: rgba(106, 90, 205, 0.8); /* Purple */
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0; /* Initially hidden */
+    transition: all 0.1s ease; /* Smooth transition */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    transform: scale(0); /* Start from small scale */
 }
 
 /* Search Bar */
