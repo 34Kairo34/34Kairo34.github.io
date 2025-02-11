@@ -1,3 +1,12 @@
+// Toggle Menu for Mobile
+function toggleMenu() {
+    const burger = document.querySelector('.burger-icon');
+    const navList = document.querySelector('nav ul');
+    
+    navList.classList.toggle('active');
+    burger.classList.toggle('active');
+}
+
 // Search functionality for anime
 document.getElementById('search-button').addEventListener('click', function() {
     const query = document.getElementById('search-bar').value.toLowerCase();
