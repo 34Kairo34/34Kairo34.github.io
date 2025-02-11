@@ -3,56 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Streaming</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- HEADER -->
     <header>
-        <h1>Anime Streaming</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="anime-list.html">Anime List</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login/SignUp</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Anime Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="anime-list.html">Anime List</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>გაიცანით თქვენი შემდეგი საყვარელი ანიმე</h2>
-        <p>მოიძიეთ საუკეთესო ანიმე სერიები და დაიწყეთ ყურება დღესვე!</p>
-        <a href="#" class="cta-btn">დაიწყეთ ახლა</a>
-    </section>
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Anime Hub</h2>
+            <p>Your go-to place for the latest and greatest anime series!</p>
+            <button class="cta">Explore Now</button>
+        </section>
 
-    <!-- Popular Anime Section -->
-    <section class="anime-list">
-        <h2>პოპულარული ანიმე</h2>
-        <div class="anime-item">
-            <img src="anime1.jpg" alt="ანიმე 1">
-            <h3>ანიმე 1</h3>
-            <a href="#">უყურე ახლა</a>
-        </div>
-        <div class="anime-item">
-            <img src="anime2.jpg" alt="ანიმე 2">
-            <h3>ანიმე 2</h3>
-            <a href="#">უყურე ახლა</a>
-        </div>
-        <div class="anime-item">
-            <img src="anime3.jpg" alt="ანიმე 3">
-            <h3>ანიმე 3</h3>
-            <a href="#">უყურე ახლა</a>
-        </div>
-    </section>
+        <section class="featured">
+            <h2>Featured Anime</h2>
+            <div class="anime-grid">
+                <div class="anime-card">
+                    <img src="images/anime1.jpg" alt="Anime 1">
+                    <h3>Attack on Titan</h3>
+                    <a href="anime1.html">Watch Now</a>
+                </div>
+                <div class="anime-card">
+                    <img src="images/anime2.jpg" alt="Anime 2">
+                    <h3>Naruto Shippuden</h3>
+                    <a href="anime2.html">Watch Now</a>
+                </div>
+                <div class="anime-card">
+                    <img src="images/anime3.jpg" alt="Anime 3">
+                    <h3>One Piece</h3>
+                    <a href="anime3.html">Watch Now</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section class="trending">
+            <h2>Trending Now</h2>
+            <div class="anime-slider">
+                <div class="slider-item">
+                    <img src="images/anime4.jpg" alt="Anime 4">
+                    <h3>Fullmetal Alchemist</h3>
+                </div>
+                <div class="slider-item">
+                    <img src="images/anime5.jpg" alt="Anime 5">
+                    <h3>My Hero Academia</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Anime Streaming. ყველა უფლება დაცულია.</p>
+        <p>&copy; 2025 Anime Hub | All Rights Reserved</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
