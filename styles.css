@@ -1,0 +1,108 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #ff6f00;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+/* Anime list styles */
+.anime-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.anime-list h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.anime-item {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.anime-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.anime-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
